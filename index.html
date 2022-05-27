@@ -1,36 +1,86 @@
 <html>
 
-  
-  <body>
-    <h1> Jamie Chin </h1>
-      <h2> Hello there, and welcome to my website! </h2>
-    <center>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/640px-SNice.svg.png">
-    </center>
-    <iframe width="392" height="620" style="border: 0px;" src="https://studio.code.org/projects/applab/S9A4IJc5n_9QpdK4yVYWXfT1CsqxcGBV3XXMPN_aS_w/embed"></iframe>
-      </body>
+ <div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
 
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; </button>
+  <h2>Hello there!</h2>
+  <p>Welcome to my website</p>
+</div>
+  
 </html>
 
 <style>
   
-  h1 {
-  color: gold; 
-  text-align: center;
-   text-decoration-line: underline;
+  nav {
+  list-style-type: none;
+  position: fixed;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0; 
+  left: 55px;
+}
+li {
+  display: inline; 
+  padding: 0;
+  float: left;
 }
 
-h2{
-  color: antiquewhite;
+a{
+  color: black;
+  text-decoration: none;
+  font-size: 120%;
+  display: block;
+  padding: 15px;
+  background-color: #dddddd;
 }
 
-body{
-  
-  background-color: black;
+li a:hover {
+  background-color: white;
+  font-size: 25px;
 }
 
-img:hover {
-  width:120%
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
 }
   
 </style>
+
+<script>
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+</script>
